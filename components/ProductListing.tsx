@@ -585,7 +585,7 @@ export default function ProductListing({
     selectedMaterials.length;
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-16">
+    <div className="min-h-screen bg-background pt-12 pb-16">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-8">
