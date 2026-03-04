@@ -153,7 +153,7 @@ function MegaMenu({ type, isOpen, onClose }: MegaMenuProps) {
                 <h3 className="text-2xl font-bold mb-2">{data.featured.title}</h3>
                 <p className="text-white/90 text-sm mb-4">{data.featured.subtitle}</p>
                 <Link
-                  href={`/collections/${type}`}
+                  href={`/shop?main=${type}`}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-accent transition-colors"
                   onClick={onClose}
                 >
@@ -334,7 +334,7 @@ export default function MegaMenuNavbar() {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
-            isMobileMenuOpen ? "max-h-[calc(100vh-5rem)] opacity-100" : "max-h-0 opacity-0"
+            isMobileMenuOpen ? "max-h-[calc(100vh-5rem)] overflow-y-scroll opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="px-4 py-6 space-y-6 bg-card border-t border-border">
@@ -347,12 +347,12 @@ export default function MegaMenuNavbar() {
                 <div className="grid grid-cols-2 gap-3">
                   {data.categories.map((category) => (
                     <div key={category.name}>
-                      <p className="text-xs font-semibold text-foreground/70 mb-2">{category.name}</p>
+                      <p className="text-xs font-semibold text-primary mb-2">{category.name}</p>
                       <ul className="space-y-1.5">
                         {category.items.slice(0, 3).map((item) => (
                           <li key={item}>
                             <Link
-                              href={`/shop/${key}/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                              href={`/shop?main=${key}&category=${category.name}&sub=${item}`}
                               className="text-xs text-foreground/60 hover:text-accent transition-colors"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >

@@ -9,17 +9,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className=" ">
-     <Hero3D/>
-     <SmartFeatures/>
-     <LifestyleSelector />
-
-      {/* 4. Customization Tool */}
+      <Hero3D />
+      <SmartFeatures />
+      <LifestyleSelector />
       <BagCustomizer />
-
-      {/* 5. Smart Compare Tool */}
       <BagComparison />
-
-      {/* 6. Fast Checkout Experience */}
       <FastCheckout />
     </div>
   );

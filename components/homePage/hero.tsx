@@ -24,7 +24,7 @@ export default function Hero3D() {
 
       <div className="relative z-10 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 itmes-start ">
         {/* Left Content */}
-        <div className="space-y-6 animate-slideInLeft">
+        <div className="space-y-6 sm:p-0 p-4 animate-slideInLeft">
           <div className="inline-block">
             <span className="px-4 py-2 bg-accent/10 border border-accent/30 rounded-full text-sm font-semibold text-accent uppercase tracking-wider">
               ✨ New Collection 2024
